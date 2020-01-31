@@ -26,3 +26,7 @@ hs_err_pid*
 /.gradle/
 /cas/build/
 /concurrent/build/
+
+# IDEA
+/.idea/
+*.iml
