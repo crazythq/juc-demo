@@ -1,4 +1,4 @@
-rootProject.name = 'java-cas-demo'
+rootProject.name = 'juc-demo'
 include 'cas'
 include 'concurrent'
 

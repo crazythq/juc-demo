@@ -19,7 +19,6 @@ repositories {
 
 //子模块配置
 subprojects {
-
     apply plugin: 'java' /* java是Gradle的核心插件，是内置的，内置插件不需要配置依赖路径 */
     apply plugin: 'idea' /* 同上  让Gradle自动生成Intellij的项目文件*/
 

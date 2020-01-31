@@ -1,2 +1,2 @@
-# java-cas-demo
+# juc-demo
 Java concurrency practises
