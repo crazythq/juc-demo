@@ -1,0 +1,51 @@
+plugins {
+    id 'java'
+}
+
+group 'com.thq.demo'
+version '1.0'
+
+/* 指定jdk版本 */
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+/* java编译的时候缺省状态下会因为中文字符而失败 */
+[compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
+
+repositories {
+    mavenLocal()
+    maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+    mavenCentral()
+}
+
+//子模块配置
+subprojects {
+
+    apply plugin: 'java' /* java是Gradle的核心插件，是内置的，内置插件不需要配置依赖路径 */
+    apply plugin: 'idea' /* 同上  让Gradle自动生成Intellij的项目文件*/
+
+    ext {
+//        junitVersion = "4.12"
+//        springVersion = "4.3.3.RELEASE"
+//        jacksonVersion = "2.4.4"
+    }
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+
+    //配置依赖
+    dependencies {
+//        compile()
+    }
+}
+
+/*
+    buildscript代码块中的声明是gradle脚本自身需要的资源。
+    可以声明的资源包括依赖项、第三方插件、maven仓库地址等。
+    gradle在执行脚本时，会优先执行buildscript代码块中的内容，然后才会执行剩余的build脚本。
+*/
+//buildscript {
+//}

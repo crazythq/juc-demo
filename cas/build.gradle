@@ -1,0 +1,6 @@
+//apply plugin: 'application'
+
+group 'com.thq.demo'
+
+/* 子模块项目名，jar名 */
+archivesBaseName = 'cas'

@@ -1,0 +1,4 @@
+rootProject.name = 'java-cas-demo'
+include 'cas'
+include 'concurrent'
+

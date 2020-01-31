@@ -1,0 +1,3 @@
+//apply plugin: 'application'
+/* 子模块项目名，jar名 */
+archivesBaseName = 'concurrent'
